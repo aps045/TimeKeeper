@@ -35,19 +35,13 @@ public class TimeKeeper {
         this.seconds = seconds;
     }
 
-    /*public TimeKeeper() {
-        hours = this.setHours();
-        minutes = this.setMinutes();
-        seconds = this.setSeconds();
-    }*/
-
     private int CalculateSeconds() {
         return (int)getHours()*3600 + (int)getMinutes()*60 + (int)getSeconds();
-    }
+    }               //Method to calculate seconds;
 
     private double CalculateDayPercentage() {
-        return ((CalculateSeconds() * 100 )/ (24*3600));
-    }
+        return (CalculateSeconds() * 100 )/ (24*3600);
+    }               //Method to calculate %age of day passed
 
     @Override
     public String toString() {
